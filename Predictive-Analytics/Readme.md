@@ -4,7 +4,7 @@
 ![Credit Score](https://raw.githubusercontent.com/veronichaflasma/Machine-Learning-Expert/main/Predictive-Analytics/Images/credtscore%20.webp)
 
 ## 1. Domain Proyek & _Background_
-Dalam industri keuangan, _Credit Scoring_ memainkan peran krusial dalam menilai risiko kredit peminjam. Metode ini memanfaatkan data keuangan dan profil kredit untuk memprediksi sejauh mana seseorang atau entitas bisnis akan membayar kembali pinjaman atau membayar kewajiban keuangan tepat waktu. Keputusan pemberian kredit merupakan pertimbangan yang kompleks, dan Bank harus memilih dengan hati-hati kepada siapa mereka akan memberikan kredit [1].
+Dalam industri keuangan, _Credit Scoring_ memainkan peran krusial dalam menilai risiko kredit peminjam. Metode ini memanfaatkan data keuangan dan profil kredit untuk memprediksi sejauh mana seseorang atau entitas bisnis akan membayar kembali pinjaman atau membayar kewajiban keuangan tepat waktu. Keputusan pemberian kredit merupakan pertimbangan yang kompleks, dan Bank harus memilih dengan hati-hati kepada siapa mereka akan memberikan kredit[1].
 
 **Mengapa Analisis _Credit Scoring_ Penting?**
 1. **Keputusan Pemberian Kredit:** Bank harus memutuskan apakah akan memberikan kredit kepada pelanggan atau tidak. _Credit Scoring_ membantu mengidentifikasi peminjam yang kredibel dan dapat membayar kembali pinjaman dengan tepat waktu.
@@ -112,7 +112,7 @@ KNN cocok digunakan dalam proyek credit scoring classification karena sifatnya y
      - Rentan terhadap data pencilan (outliers) karena pengaruh langsung dari titik-titik _Nearest Neighbors_.
      - Sensitif terhadap skala dan jarak yang digunakan dalam menghitung _Nearest Neighbors_.
 ### 5.2. **Random Forest**:
-Random Forest merupakan pilihan yang baik karena kemampuannya dalam menangani kompleksitas dan variabilitas data kredit yang terjadi.[[3 (https://doi.org/10.1109/ACCESS.2021.3055815)]
+Random Forest merupakan pilihan yang baik karena kemampuannya dalam menangani kompleksitas dan variabilitas data kredit yang terjadi.[3](https://doi.org/10.1109/ACCESS.2021.3055815)]
    - **Kelebihan**:
      - Mampu menangani masalah klasifikasi dan regresi dengan baik.
      - Tidak terlalu rentan terhadap overfitting karena membangun banyak pohon keputusan secara acak.
