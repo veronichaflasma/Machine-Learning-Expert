@@ -1,6 +1,8 @@
 # Laporan Proyek Machine Learning Terapan - Flasma Veronicha H
 ## _Credit Scoring Classification_
 
+![Credit Score](https://raw.githubusercontent.com/veronichaflasma/Machine-Learning-Expert/main/Predictive-Analytics/Images/credtscore%20.webp)
+
 ## 1. Domain Proyek & _Background_
 Dalam industri keuangan, _Credit Scoring_ memainkan peran krusial dalam menilai risiko kredit peminjam. Metode ini memanfaatkan data keuangan dan profil kredit untuk memprediksi sejauh mana seseorang atau entitas bisnis akan membayar kembali pinjaman atau membayar kewajiban keuangan tepat waktu. Keputusan pemberian kredit merupakan pertimbangan yang kompleks, dan Bank harus memilih dengan hati-hati kepada siapa mereka akan memberikan kredit [1].
 
@@ -101,7 +103,7 @@ Data preparation adalah proses persiapan data sebelum data tersebut dapat diguna
 Dalam proyek pembuatan model machine learning untuk credit scoring classification, penggunaan tiga model yaitu K-Nearest Neighbors (KNN), Random Forest, dan Naive Bayes dapat memberikan beragam kelebihan dan kekurangan. Berikut adalah penjelasan mengenai ketiga model tersebut:
 
 ### 5.1. **K-Nearest Neighbors (KNN)**:
-KNN cocok digunakan dalam proyek credit scoring classification karena sifatnya yang sederhana dan kemampuannya untuk menangani pola yang cukup jelas dalam data kredit[[2]()]
+KNN cocok digunakan dalam proyek credit scoring classification karena sifatnya yang sederhana dan kemampuannya untuk menangani pola yang cukup jelas dalam data kredit[[2](https://doi.org/10.1109/TPWRS.2021.3064704)]
    - **Kelebihan**:
      - Tidak memerlukan pembelajaran yang rumit atau pemahaman yang mendalam terhadap data.
      - KNN cocok untuk dataset dengan pola yang sederhana atau distribusi yang tidak terlalu kompleks.
@@ -110,7 +112,7 @@ KNN cocok digunakan dalam proyek credit scoring classification karena sifatnya y
      - Rentan terhadap data pencilan (outliers) karena pengaruh langsung dari titik-titik _Nearest Neighbors_.
      - Sensitif terhadap skala dan jarak yang digunakan dalam menghitung _Nearest Neighbors_.
 ### 5.2. **Random Forest**:
-Random Forest merupakan pilihan yang baik karena kemampuannya dalam menangani kompleksitas dan variabilitas data kredit yang terjadi.[[3]()]
+Random Forest merupakan pilihan yang baik karena kemampuannya dalam menangani kompleksitas dan variabilitas data kredit yang terjadi.[[3 (https://doi.org/10.1109/ACCESS.2021.3055815)]
    - **Kelebihan**:
      - Mampu menangani masalah klasifikasi dan regresi dengan baik.
      - Tidak terlalu rentan terhadap overfitting karena membangun banyak pohon keputusan secara acak.
@@ -120,7 +122,7 @@ Random Forest merupakan pilihan yang baik karena kemampuannya dalam menangani ko
      - Waktu pembelajaran mungkin lebih lama daripada model yang lebih sederhana seperti KNN.
      - Memerlukan pemrosesan yang lebih besar karena membangun banyak pohon keputusan.
 ### 5.3. **Naive Bayes**:
-Naive Bayes sering digunakan dalam klasifikasi credit scoring karena sifatnya yang cepat dan efisien, serta kemampuannya menangani data yang memiliki banyak fitur dan korelasi yang relatif rendah.[[4]()]
+Naive Bayes sering digunakan dalam klasifikasi credit scoring karena sifatnya yang cepat dan efisien, serta kemampuannya menangani data yang memiliki banyak fitur dan korelasi yang relatif rendah.[[4](https://doi.org/10.1109/ICCIS52050.2020.9321589)]
    - **Kelebihan**:
      - Cocok untuk dataset dengan fitur-fitur yang saling bebas (independen).
      - Tidak memerlukan banyak data pelatihan untuk memberikan hasil yang baik.
@@ -130,7 +132,7 @@ Naive Bayes sering digunakan dalam klasifikasi credit scoring karena sifatnya ya
      - Tidak cocok untuk dataset dengan hubungan kompleks antara fitur.
      - Performa Naive Bayes bisa terpengaruh oleh fitur yang memiliki distribusi yang sangat berbeda.
 ## 6. Evaluation
-Dalam konteks evaluasi pada proyek klasifikasi _Credit Score_, beberapa metrik yang digunakan adalah **Accuracy, Recall, Precission, dan F1-Score[5].**
+Dalam konteks evaluasi pada proyek klasifikasi _Credit Score_, beberapa metrik yang digunakan adalah **Accuracy, Recall, Precission, dan F1-Score.**[5](https://doi.org/10.1016/j.ipm.2009.03.002)
 
 ### 6.1. **Accuracy**
    - **Accuracy** mengukur sejauh mana model mampu memprediksi dengan benar, dan dihitung sebagai persentase dari total prediksi yang benar (TP dan TN) dibagi dengan total data.
