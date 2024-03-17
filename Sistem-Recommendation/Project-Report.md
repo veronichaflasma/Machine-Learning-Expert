@@ -5,24 +5,17 @@
 
 ## 1. Project Overview
 
-Dalam era modern ini, kemajuan teknologi telah membawa perubahan besar dalam berbagai aspek kehidupan, termasuk dalam industri pariwisata. Semakin banyak orang yang mencari pengalaman unik dan berkesan dalam perjalanan mereka, membuat permintaan akan sistem rekomendasi destinasi wisata semakin meningkat.
+Di era modern saat ini, perkembangan teknologi telah mengakibatkan perubahan yang signifikan dalam berbagai bidang kehidupan, termasuk di sektor pariwisata. Semakin banyak individu yang menginginkan pengalaman perjalanan yang unik dan berkesan, sehingga permintaan akan sistem rekomendasi destinasi wisata semakin meningkat.
 
-Projek ini bertujuan untuk membangun sistem rekomendasi destinasi wisata di Surabaya, kota metropolitan terbesar kedua di Indonesia setelah Jakarta. Surabaya menawarkan beragam atraksi wisata mulai dari sejarah, budaya, kuliner, hingga hiburan modern. Dengan jumlah destinasi wisata yang begitu banyak, seringkali wisatawan merasa kesulitan untuk memilih tempat yang sesuai dengan preferensi mereka.
+Aplikasi perjalanan seperti [Traveloka](https://www.traveloka.com/en-id) telah menggunakan teknologi machine learning untuk memberikan rekomendasi tempat wisata yang sesuai dengan preferensi pengguna. Sebagai contoh, saat pengguna mencari destinasi wisata di suatu daerah, aplikasi tersebut dapat menganalisis ulasan dari pengguna dengan preferensi serupa dan mengusulkan destinasi yang cocok.
 
-**Keunggulan dan Kepentingan Proyek:**
-- Membantu wisatawan dalam menemukan destinasi wisata yang sesuai dengan minat dan preferensi mereka.
-- Mengurangi kebingungan dan waktu yang terbuang dalam mencari informasi destinasi wisata yang tepat.
-- Meningkatkan pengalaman wisatawan dengan memberikan rekomendasi yang relevan dan personal.
-- Mendukung perkembangan industri pariwisata di Surabaya dengan meningkatkan kunjungan ke destinasi-destinasi yang kurang terkenal namun menarik.
+Dengan demikian, penerapan machine learning dalam memberikan rekomendasi tempat wisata tidak hanya memberikan keuntungan bagi pengguna secara individu, tetapi juga dapat memberikan kontribusi yang besar dalam pengembangan industri pariwisata secara keseluruhan dan mendukung upaya pemerintah dalam memajukan pariwisata lokal.
 
-**Riset Terkait:**
-- Menurut survei yang dilakukan oleh Badan Pusat Statistik (BPS) pada tahun 2019, sektor pariwisata di Surabaya terus mengalami pertumbuhan signifikan dengan jumlah kunjungan wisatawan domestik maupun mancanegara yang terus meningkat setiap tahunnya [[1]]().
-- Penelitian oleh Universitas Airlangga [[2]](http://www.unair.ac.id/) menunjukkan bahwa sebagian besar wisatawan mengalami kesulitan dalam menemukan informasi tentang destinasi wisata di Surabaya yang sesuai dengan minat mereka.
-- Berdasarkan Data Kemendagri [[3]](https://www.kemendagri.go.id/), sektor pariwisata di Surabaya memiliki potensi besar untuk terus berkembang dengan adanya dukungan infrastruktur dan promosi yang lebih baik.
-
-Dengan menggabungkan teknologi dan informasi, sistem rekomendasi destinasi wisata di Surabaya akan menjadi solusi yang efektif untuk memenuhi kebutuhan wisatawan dalam menjelajahi keindahan kota ini dengan lebih mudah dan menyenangkan.
+Tujuan dari proyek ini adalah untuk membangun sistem rekomendasi destinasi wisata di Surabaya, yang merupakan kota metropolitan terbesar kedua di Indonesia setelah Jakarta. 
 
 ## 2. Business Understanding
+Dengan banyaknya destinasi risata di Surabaya menyebabkan kebingungan bagi beberapa orang. Oleh karena itu, diciptakanlah sebuah sistem rekomendasi yang bertujuan untuk membantu para pengunjung memilih destinasi wisata berdasarkan data historis, seperti tempat wisata yang telah mereka kunjungi sebelumnya, serta rekomendasi berdasarkan rating dari pengunjung sebelumnya.
+
 ### 2.1. Problem Statements
 
 1. Bagaimana cara mengembangkan sistem rekomendasi pengunjung yang dipersonalisasi dengan menggunakan teknik _Content-Based Filtering_?
@@ -98,8 +91,50 @@ Nama Dataset: [Indonesia Tourism Destination](https://www.kaggle.com/datasets/ap
    | `Location`| Lokasi user      |
    | `Age`     | Umur user        |
 
+### 3.3 Univariate - EDA
+Melakukan _Univariate_ EDA untuk memvisualisasikan data untuk memahami masing-masing fitur yang telah diproses sebelumnya.
+* Total Tempat Wisata di Surabaya berdasarkan _Category_
+  ![UEDA - Category](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/uni1.png?raw=True)
+  
+   Grafik di atas menampilkan jumlah total dan persentase dari berbagai kategori tempat di Surabaya
+   
+   * Jumlah total tempat wisata di semua kategori: 46
+   * Jumlah total tempat wisata dalam kategori Taman Hiburan: 18 (39.1% dari total)
+   * Jumlah total tempat wisata dalam kategori Budaya: 18 (39.1% dari total)
+   * Jumlah total tempat wisata dalam kategori Cagar Alam: 5 (10.9% dari total)
+   * Jumlah total tempat wisata dalam kategori Tempat Ibadah: 3 (6.5% dari total)
+   * Jumlah total tempat wisata dalam kategori Pusat Perbelanjaan: 1 (2.2% dari total)
+   * Jumlah total tempat wisata dalam kategori Bahari: 1 (2.2% dari total)
+     
+* Total Rating berdasarka _Category_ tempat wisata
+  ![UEDA - Rating](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/uni2.png?raw=True)
+  
+   Jumlah total rating dari berbagai kategori tempat wisata adalah sebagai berikut:
+   
+   * Terdapat 10 rating dengan nilai 2.
+   * Terdapat 12 rating dengan nilai 3.
+   * Terdapat 14 rating dengan nilai 4.
+   * Terdapat 10 rating dengan nilai 5.
+  
+### 3.4 Multivariate - EDA
+ Melakukan _Multivariate_ EDA proses untuk memahami hubungan antara dua atau lebih variabel pada saat yang bersamaan. 
+* Top 10 Destinasi Wisata dengan Rating Tertinggi
+![MEDA - Top Dest](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/multi1.png?raw=True)
+Grafik di atas menampilkan beberapa tempat wisata yang mendapat rating tertinggi, yaitu rating 5.
 
+* Top 5 Destinasi Wisata di Surabaya dengan Harga Tiket Masuk Tertinggi:
+![MEDA - Top Price](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/multi5.png?raw=True)
 
+   Grafik di atas menampilkan tempat-tempat wisata dengan harga tiket tertinggi, dengan detail sebagai berikut:
+   * Atlantis Land Surabaya: Rp 125.000
+   * Ciputra Waterpark: Rp 95.000
+   * Surabaya North Quay: Rp 50.000
+   * Air Mancur Menari: Rp 35.000
+   * Waterpark Kenjeran Surabaya: Rp 35.000
+   * Kebun Binatang Surabaya: Rp 15.000
+   * Monumen Kapal Selam: Rp 15.000
+   * Pantai Ria Kenjeran: Rp 15.000
+   * Gereja Perawan Maria Tak Berdosa Surabaya: Rp 10.000
 
 ## 4. Data Preparation
  * Pengambilan data berdasarkan `City` Surabaya dari `package_tourism` karena proyek ini berfokus pada pembuatan sistem rekomendasi destinasi wisata yang terdapat di kota Surabaya
@@ -128,25 +163,31 @@ Nama Dataset: [Indonesia Tourism Destination](https://www.kaggle.com/datasets/ap
       |  11 | Unnamed: 11  | 0 non-null     | float64  |
       |  12 | Unnamed: 12  | 46 non-null    | int64    |
   * Menggabungkan dua dataset, yaitu `sby_tourism` dan `rating_tourism`, menggunakan fungsi `merge()`. Penggabungan dataset dilakukan untuk menggabungkan informasi yang relevan dari kedua dataset. Dataset `package_tourism.csv` berisi informasi tentang tempat, dan dataset `rating.csv` berisi rating pengguna untuk setiap `package_tourism`, maka dengan menggabungkan kedua dataset tersebut juga dapat menganalisis hubungan antara atribut `package_tourism` dengan `user`.
-  * Penanganan _Missing Value_ pada variable `sby_package`,`rating`, dan `user`
+  * Penanganan _Missing Value_ pada variable `sby_package` dan `rating` dengan menghitung _Missing Value_ menggunakan `isnull().sum()`. Namun pada data ini tidak ada _Missing Value_ .
+   
+       | `sby_package` | Missing Values |
+      |---------------|----------------|
+      | Place_Id      | 0              |
+      | Place_Name    | 0              |
+      | Description   | 0              |
+      | Category      | 0              |
+      | City          | 0              |
+      | Price         | 0              |
+      | Rating        | 0              |
+      | Coordinate    | 0              |
+      | Lat           | 0              |
+      | Long          | 0              |
+   
+      
+      | `rating`        | Missing Values |
+      |---------------|----------------|
+      | User_Id       | 0              |
+      | Place_Id      | 0              |
+      | Place_Ratings| 0              |
+   
+
   * Menghapus baris yang merupakan duplikat pada `Place_Id` menggunakan fungsi `drop_duplicates()`. Menghapus data duplikat membantu meminimalkan redundansi dan mencegah hasil analisis yang bias atau tidak akurat karena keberadaan data yang sama dengan nilai yang sama.
 
-
-### 4.1 Univariate - EDA
-Melakukan _Univariate_ EDA untuk memvisualisasikan data untuk memahami masing-masing fitur yang telah diproses sebelumnya.
-* Total Tempat Wisata di Surabaya berdasarkan _Category_
-  ![UEDA - Category](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/uni1.png?raw=True)
-* Total Rating berdasarka _Category_ tempat wisata
-  ![UEDA - Rating](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/uni2.png?raw=True)
-
-### 4.2 Multivariate - EDA
- Melakukan _Multivariate_ EDA proses untuk memahami hubungan antara dua atau lebih variabel pada saat yang bersamaan. 
-* Top 10 Destinasi Wisata dengan Rating Tertinggi
-![MEDA - Top Dest](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/multi1.png?raw=True)
-* Top 5 Destinasi Wisata dengan Penilaian Rata-rata Tertinggi
-![MEDA - Top Dest](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/meda3.png?raw=True)
-* Top 5 Destinasi Wisata di Surabaya dengan Harga Tiket Masuk Tertinggi:
-![MEDA - Top Dest](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/multi3.png?raw=True)
 
 ## 5. Modeling
 ### 5.1 Content-Based Filtering
