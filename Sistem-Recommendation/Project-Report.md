@@ -9,7 +9,7 @@ Di era modern saat ini, perkembangan teknologi telah mengakibatkan perubahan yan
 
 Aplikasi perjalanan seperti [Traveloka](https://www.traveloka.com/en-id) telah menggunakan teknologi machine learning untuk memberikan rekomendasi tempat wisata yang sesuai dengan preferensi pengguna. Sebagai contoh, saat pengguna mencari destinasi wisata di suatu daerah, aplikasi tersebut dapat menganalisis ulasan dari pengguna dengan preferensi serupa dan mengusulkan destinasi yang cocok.
 
-Dengan demikian, penerapan machine learning dalam memberikan rekomendasi tempat wisata tidak hanya memberikan keuntungan bagi pengguna secara individu, tetapi juga dapat memberikan kontribusi yang besar dalam pengembangan industri pariwisata secara keseluruhan dan mendukung upaya pemerintah dalam memajukan pariwisata lokal.
+Dengan demikian, penerapan _Machine Learning_ dalam memberikan rekomendasi tempat wisata tidak hanya memberikan keuntungan bagi pengguna secara individu, tetapi juga dapat memberikan kontribusi yang besar dalam pengembangan industri pariwisata secara keseluruhan dan mendukung upaya pemerintah dalam memajukan pariwisata lokal.
 
 Tujuan dari proyek ini adalah untuk membangun sistem rekomendasi destinasi wisata di Surabaya, yang merupakan kota metropolitan terbesar kedua di Indonesia setelah Jakarta. 
 
