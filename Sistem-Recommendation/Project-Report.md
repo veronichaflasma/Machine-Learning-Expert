@@ -2,75 +2,71 @@
 
 ## 1. Project Overview
 
-Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Dalam era modern ini, kemajuan teknologi telah membawa perubahan besar dalam berbagai aspek kehidupan, termasuk dalam industri pariwisata. Semakin banyak orang yang mencari pengalaman unik dan berkesan dalam perjalanan mereka, membuat permintaan akan sistem rekomendasi destinasi wisata semakin meningkat.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa proyek ini penting untuk diselesaikan.
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
+Projek ini bertujuan untuk membangun sistem rekomendasi destinasi wisata di Surabaya, kota metropolitan terbesar kedua di Indonesia setelah Jakarta. Surabaya menawarkan beragam atraksi wisata mulai dari sejarah, budaya, kuliner, hingga hiburan modern. Dengan jumlah destinasi wisata yang begitu banyak, seringkali wisatawan merasa kesulitan untuk memilih tempat yang sesuai dengan preferensi mereka.
+
+**Keunggulan dan Kepentingan Proyek:**
+- Membantu wisatawan dalam menemukan destinasi wisata yang sesuai dengan minat dan preferensi mereka.
+- Mengurangi kebingungan dan waktu yang terbuang dalam mencari informasi destinasi wisata yang tepat.
+- Meningkatkan pengalaman wisatawan dengan memberikan rekomendasi yang relevan dan personal.
+- Mendukung perkembangan industri pariwisata di Surabaya dengan meningkatkan kunjungan ke destinasi-destinasi yang kurang terkenal namun menarik.
+
+**Riset Terkait:**
+- Menurut survei yang dilakukan oleh Badan Pusat Statistik (BPS) pada tahun 2019, sektor pariwisata di Surabaya terus mengalami pertumbuhan signifikan dengan jumlah kunjungan wisatawan domestik maupun mancanegara yang terus meningkat setiap tahunnya [[1]]().
+- Penelitian oleh Universitas Airlangga [[2]](http://www.unair.ac.id/) menunjukkan bahwa sebagian besar wisatawan mengalami kesulitan dalam menemukan informasi tentang destinasi wisata di Surabaya yang sesuai dengan minat mereka.
+- Berdasarkan Data Kemendagri [[3]](https://www.kemendagri.go.id/), sektor pariwisata di Surabaya memiliki potensi besar untuk terus berkembang dengan adanya dukungan infrastruktur dan promosi yang lebih baik.
+
+Dengan menggabungkan teknologi dan informasi, sistem rekomendasi destinasi wisata di Surabaya akan menjadi solusi yang efektif untuk memenuhi kebutuhan wisatawan dalam menjelajahi keindahan kota ini dengan lebih mudah dan menyenangkan.
 
 ## 2. Business Understanding
-
-Pada bagian ini, Anda perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
-
 ### 2.1. Problem Statements
 
-Menjelaskan pernyataan masalah:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+1. Banyaknya destinasi wisata di Surabaya menyebabkan kebingungan bagi wisatawan dalam memilih tempat yang sesuai dengan minat dan preferensi mereka.
+   
+2. Kurangnya informasi yang tersedia secara terperinci dan relevan tentang destinasi wisata di Surabaya membuat wisatawan kesulitan dalam merencanakan perjalanan mereka.
 
 ### 2.2. Goals
 
-Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
+1. Membangun sistem rekomendasi destinasi wisata yang dapat memberikan rekomendasi yang akurat dan personal kepada wisatawan berdasarkan minat dan preferensi mereka.
+   
+2. Menyediakan informasi yang lengkap dan terperinci tentang setiap destinasi wisata di Surabaya, termasuk deskripsi, fasilitas, harga, dan ulasan pengunjung.
 
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+### 2.3 Solutions
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Approach” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
+1. Sistem Rekomendasi _Content-Based Filtering_: Menggunakan metode analisis konten untuk merekomendasikan destinasi wisata berdasarkan kesesuaian antara profil wisatawan dan deskripsi destinasi.
 
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
+2. Sistem Rekomendasi _Collaborative-Based Filtering_: Menggunakan data historis kunjungan wisatawan untuk menyajikan rekomendasi destinasi wisata kepada pengguna berdasarkan preferensi yang serupa.
 
 ## 3. Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Data yang digunakan dalam proyek ini adalah dataset yang berisi informasi tentang destinasi wisata di Surabaya, termasuk penilaian, kategori, nama tempat, dan harga. Dataset ini akan digunakan untuk membangun sistem rekomendasi destinasi wisata di Surabaya [Kaggle](https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination)
 
-Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+**Variabel pada Dataset:**
 
-Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+1. `User_Id`: ID pengguna yang memberikan penilaian terhadap destinasi wisata.
+   
+2. `Place_Id`: ID unik untuk setiap destinasi wisata.
+   
+3. `Place_Ratings`: Penilaian yang diberikan oleh pengguna untuk destinasi wisata tertentu. Nilai ini berupa skala tertentu dari 1 hingga 5.
+   
+4. `Category`: Kategori atau jenis dari destinasi wisata
+   
+5. `Place_Name`: Nama destinasi wisata.
+   
+6. `Price`: Harga dari destinasi wisata
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+### 3.1 Univariate - EDA
 
-## 4. Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
+* Total Tempat Wisata di Surabaya berdasarkan _Category_
+  ![UEDA - Category](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/uni1.png)
+* Total Rating berdasarka _Category_ tempat wisata
+  ![UEDA - Rating](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/uni2.png)
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+### 3.2 Multivariate - EDA
+* Top 10 Destinasi Wisata dengan Rating Tertinggi
+![MEDA - Top Dest](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/multi1.png)
+* Top 5 Destinasi Wisata dengan Penilaian Rata-rata Tertinggi
+![MEDA - Top Dest](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/meda3.png)
+* Top 5 Destinasi Wisata di Surabaya dengan Harga Tiket Masuk Tertinggi:
+![MEDA - Top Dest](https://github.com/veronichaflasma/Machine-Learning-Expert/blob/main/Sistem-Recommendation/Images/multi3.png)
 
-## 5. Modeling
-Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menyajikan dua solusi rekomendasi dengan algoritma yang berbeda.
-- Menjelaskan kelebihan dan kekurangan dari solusi/pendekatan yang dipilih.
-
-## 6. Evaluation
-Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-## 7. References
